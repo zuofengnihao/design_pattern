@@ -10,13 +10,22 @@ package cn.zuofeng.p1;
  */
 public class Singleton4 {
 
-    public static class SingletonHolder {
+    static {
+        System.out.println("Singleton4 加载");
+    }
+
+    private static class SingletonHolder {
+
+        static {
+            System.out.println("内部类 SingletonHolder 加载");
+        }
+
         public static Singleton4 singleton4 = new Singleton4();
     }
 
     private Singleton4(){}
 
-    private static Singleton4 getSingleton4() {
+    public static Singleton4 getSingleton4() {
         return SingletonHolder.singleton4;
     }
 }

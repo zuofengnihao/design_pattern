@@ -20,4 +20,11 @@ public class Singleton2 {
         }
         return singleton2;
     }
+
+    public static synchronized Singleton2 getInstance() {
+        if (singleton2 == null) {
+            singleton2 = new Singleton2();
+        }
+        return singleton2;
+    }
 }
