@@ -1,5 +1,7 @@
 package cn.zuofeng.p3;
 
+import cn.zuofeng.p3.MilkTea.*;
+
 /**
  * @Auther: ZuoFeng
  * @Date: 2022/4/8 13:38
@@ -8,8 +10,8 @@ package cn.zuofeng.p3;
 public class Test {
 
     public static void main(String[] args) {
-        MilkTea.Builder builder = new MilkTea.Builder("珍珠奶茶");
-        MilkTea milkTea = builder.ice(true).pearl(true).size("大杯").build();
+        Builder milkTeaBuild = new Builder("波霸奶茶").size("大杯").pearl(true).ice(false);
+        MilkTea milkTea = milkTeaBuild.build();
         System.out.println(milkTea);
     }
 }
